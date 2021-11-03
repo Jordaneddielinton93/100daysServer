@@ -5,9 +5,9 @@ let router = express.Router();
 
 router.get("/profiles",async (req,res)=>{
   
-  // let listOfprofiles = await getAllUserProfiles()
-  // console.log(listOfprofiles)
-  res.send("listOfprofiles")
+  let listOfprofiles = await getAllUserProfiles()
+  console.log(listOfprofiles)
+  res.send(listOfprofiles)
   
 })
 
