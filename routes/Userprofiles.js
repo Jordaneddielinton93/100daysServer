@@ -2,9 +2,6 @@ let express = require("express");
 const { getAllUserProfiles } = require("../models/getAllUserProfiles");
 let router = express.Router();
 
-router.get("/",async(req,res)=>{
-  res.send("this app is working on users before profile")
-})
 
 router.get("/profiles",async (req,res)=>{
   
@@ -13,5 +10,10 @@ router.get("/profiles",async (req,res)=>{
   res.json(listOfprofiles)
   
 })
+
+router.get("/",async(req,res)=>{
+  res.send("this app is working on users before profile")
+})
+
 
 module.exports=router
