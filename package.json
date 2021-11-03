@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bin/www.js",
+    "dev":"node -r dotenv/config bin/www.js ",
     "createUserProfileTable": "node ./db/scripts/createUserProfileTable.js",
     "populateUserProfileTable": "node ./db/scripts/populateUserProfileTable.js",
     "dropUserProfileTable": "node ./db/scripts/dropUserProfileTable.js",
