@@ -10,9 +10,7 @@ router.get("/profiles",async (req,res)=>{
 
   let listOfprofiles = await getAllUserProfiles()
 
-  console.log(listOfprofiles)
-
-  res.send(listOfprofiles)
+  res.json(listOfprofiles)
   
 })
 
