@@ -9,7 +9,8 @@ async function createUserProfileTable(){
       pixel_img VARCHAR(500),
       hasPostedToday BOOLEAN,
       tot_days_posted INT,
-      tot_days_consistent INT
+      tot_days_consistent INT,
+      list_of_dates_posted integer[]
     )
   `)
   console.log("user profile has been created")

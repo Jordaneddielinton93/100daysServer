@@ -1,5 +1,5 @@
 let express = require("express");
-const { getAllUserProfiles } = require("../models/getAllUserProfiles");
+const { getAllUserProfiles,insertIntoUserProfile} = require("../models/userProfiles");
 let router = express.Router();
 
 
@@ -7,7 +7,17 @@ router.get("/profiles",async (req,res)=>{
   
   let listOfprofiles = await getAllUserProfiles()
   console.log(listOfprofiles)
-  res.send(listOfprofiles)
+  res.json(listOfprofiles)
+  
+})
+
+
+router.put("/addprofile/:userInfo",async (req,res)=>{
+  console.log("this route has been hit addprofile")
+  console.log(req.params , "addprofile")
+  // let {uid,name,email,}=req.params
+  // let addUserProfile = await insertIntoUserProfile()
+  
   
 })
 
